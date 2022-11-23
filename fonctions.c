@@ -75,7 +75,7 @@ int tri_merge(int *a, int n) {
 		}
 	}
 	else {
-		return merge(0, (n/2)+1, n, &swap_number)
+		return merge(tri_merge(), tmp, 0, (n/2)+1, n, &swap_number)
 	}
 	
 	
