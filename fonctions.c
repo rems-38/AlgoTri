@@ -68,20 +68,16 @@ int tri_merge(int *a, int n) {
 	static int swap_number = 0;
 	int *tmp = malloc(n * sizeof(int));
 
-	
-	/*
-	int delta = right - left;
-	if(delta == 1) return tab;
-	else if(delta == 2) {
+	if(n == 1) return a;
+	else if(n == 2) {
 		if(a[0] > a[1]) {
-			swap(&tab[0], &tab[1]);
+			swap(&a[0], &a[1]);
 		}
 	}
 	else {
-		return merge()
+		return merge(0, (n/2)+1, n, &swap_number)
 	}
 	
-	*/
 	
 }
 
