@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "fonctions.h"
-
-
 
 
 void affiche(int* a, int n){
@@ -12,7 +11,6 @@ void affiche(int* a, int n){
 	}
 	printf("\n\n");
 }
-
 
 int compare(int* a, int *b, int n){
 	int i;
@@ -35,18 +33,22 @@ void swap(int *a, int *b){
 int tri_bulle(int* a, int n){
 	int swap_number = 0;
 	int i, j;
-	for (i = 0 ; i < n ; i++){
-		for (j = 0 ; j < n - 1 ; j++){
+	bool trie;
+	for (i = 0 ; i < n - 1 ; i++){
+		trie = true;
+		for (j = 0 ; j < n - i - 1 ; j++){
 			if (a[j] > a[j+1]){
 				swap(&a[j], &a[j+1]);
 				swap_number++;
+				trie = false;
 			}
+		}
+		if (trie){
+			break;
 		}
 	}
 	return swap_number;
 }
-
-
 
 int tri_insertion(int* a, int n){
 	int swap_number = 0;
@@ -61,5 +63,3 @@ int tri_insertion(int* a, int n){
 	}
 	return swap_number;
 }
-
-

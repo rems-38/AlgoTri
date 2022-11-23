@@ -11,10 +11,9 @@ int main(){
 	
 	int n = sizeof(ref)/sizeof(int);
 
-	int swap_number = tri_bulle(tab3, n);
-	// compare(tab1, ref, n);
+	int swap_number = tri_bulle(tab2, n);
+	compare(tab2, ref, n);
 	printf("Number of swaps: %d\n\n", swap_number);
-
 
 	return 0;
 }
