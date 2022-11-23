@@ -1,0 +1,21 @@
+fonction bubblesort(int tableau[], int tailleTableau)
+    int i, j, temp; 
+    pour (i = 0; i < tailleTableau - 1; i++) { 
+        pour (j = 0; j < tailleTableau - 1; j++) { 
+            si (tableau[j] > tableau[j + 1]) alors 
+                temp = tableau[j]; 
+                tableau[j] = tableau[j + 1]; 
+                tableau[j + 1] = temp;  
+        fin pour
+    fin pour
+fin fonction
+
+fonction main()  
+    int tableau[5] = { 5, 2, 9, 4, 7 }; 
+    int i; 
+    bubblesort(tableau, 5); 
+    for (i = 0; i < 5; i++) { 
+        afficher("%d ", tableau[i]); 
+    } 
+    renvoyer 0; 
+}

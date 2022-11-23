@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{tikz,tkz-tab}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{float,graphicx}
+\usepackage{pstricks,pst-all,pst-plot,pstricks-add,pst-3dplot}
+\usepackage{cases}
+\usepackage{array}
+\usepackage[shortlabels]{enumitem}
+\usepackage{eurosym}
+\usepackage{bbm}
+\usepackage[european, straightvoltages, RPvoltages]{circuitikz}
+\usepackage{diagbox}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\title{CS221 - TP1}
+\author{Vincent MOUCADEAU - Rémi MAZZONE | 2A}
+\date{23/11/2022}
+
+
+\newenvironment{restoretext}%
+    {
+     \begin{adjustwidth}{}{\leftmargin}%
+    }{\end{adjustwidth}
+     }
+     
+\renewcommand*{\overrightarrow}[1]{\vbox{\halign{##\cr 
+  \tiny\rightarrowfill\cr\noalign{\nointerlineskip\vskip1pt} 
+  $#1\mskip2mu$\cr}}}
+
+
+\newcommand{\dvec}[1]{\overrightarrow{#1}} % Commande perso pour vecteurs
+\newcommand{\fracvec}[3]{\dfrac{#1}{#2}\dvec{#3}}
+
+     
+\newcommand*\Vc[2][1ex]{\Vcaux#2,,\Vcaux{#1}}% arg optionnel = espacement entre coordonnées
+\def\Vcaux#1,#2,#3,#4\Vcaux#5{%
+    \ensuremath{\left(\vcenter{\baselineskip0pt
+    \halign{\hfil\kern.25em$##$\kern.25em\hfil\crcr
+        #1\cr\noalign{\vskip#5}#2\cr\noalign{\vskip#5}#3\crcr}%
+    }\right)}%
+} 
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+
+\renewcommand{\arraystretch}{1.4}
+
+% -------- PYTHON -------- %
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{language=C,%
+    %basicstyle=\color{red},
+    aboveskip=3mm,
+    belowskip=3mm,
+    basicstyle={\small\ttfamily},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=14pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+\renewcommand{\contentsname}{Table des matières}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Dans ce TP, maintenant que nous avons pris en main les outils de bases, nous allons passer à l'étude d'un système un peu plus complexe, qui traduit un vrai problème. En effet, nous allons étudier le mouvement d'un pendule (sans frottements) avec deux approches différentes : nous utiliserons Simulink dans la première partie et uniquement Matlab dans la deuxième.
+
+\section{Préparation}
+\subsection{Pseudo code du tri "Bubble sort"} 
+
+\begin{lstlisting}[language=C, caption=Pseudo code du tri "Bubble sort"]
+    input: int N, int D
+    output: int
+    begin
+      res $\gets$ 0
+      while N $\geq$ D 
+        N $\gets$ N - D
+        res $\gets$ res + 1      
+      end
+      return res
+    end     
+\end{lstlisting} 
+
+\newpage 
+\section{Conclusion}
+Lors de ce TP, nous avons pu simuler le comportement d'un circuit RC + R//C à l'aide de Matlab. Nous avons pu faire une analyse temporelle et fréquentielle du circuit. Nous avons pu observer que la tension $U_c$ est déphasée par rapport à la tension $U_s$.
+
+\end{document}
+,
