@@ -4,7 +4,7 @@
 #include "fonctions.h"
 
 
-void affiche(int* a, int n){
+void affiche(int *a, int n){
 	int i;
 	for (i = 0 ; i < n ; i++){
 		printf("%d ", a[i]);
@@ -12,7 +12,7 @@ void affiche(int* a, int n){
 	printf("\n\n");
 }
 
-int compare(int* a, int *b, int n){
+int compare(int *a, int *b, int n){
 	int i;
 	for(i=0; i < n ; i++){
 		if (a[i] != b[i]){
@@ -30,7 +30,7 @@ void swap(int *a, int *b){
 	*b = tmp;
 }
 
-int tri_bulle(int* a, int n){
+int tri_bulle(int *a, int n){
 	int swap_number = 0;
 	int i, j;
 	bool trie;
@@ -50,7 +50,7 @@ int tri_bulle(int* a, int n){
 	return swap_number;
 }
 
-int tri_insertion(int* a, int n){
+int tri_insertion(int *a, int n){
 	int swap_number = 0;
 	int i, j;
 	for (i = 1 ; i < n ; i++){
@@ -62,4 +62,69 @@ int tri_insertion(int* a, int n){
 		}
 	}
 	return swap_number;
+}
+
+int tri_merge(int *a, int n) {
+	static int swap_number = 0;
+	int *tmp = malloc(n * sizeof(int));
+
+	
+	/*
+	int delta = right - left;
+	if(delta == 1) return tab;
+	else if(delta == 2) {
+		if(a[0] > a[1]) {
+			swap(&tab[0], &tab[1]);
+		}
+	}
+	else {
+		return merge()
+	}
+	
+	*/
+	
+}
+
+
+void merge (int *tab, int *tmp, int left, int mid, int right, int *cnt) {
+	int init_mid = mid;
+	bool end_left = false, end_mid = false;
+	for(int i = left; i < right; i++) {
+		if((tab[left] < tab[mid]) && !end_left) {
+			tmp[i] = tab[left];
+			if(left < init_mid - 1) {
+				left++;
+			}
+			else {
+				end_left = true;
+			}
+		}
+		else if ((tab[left] > tab[mid]) && !end_mid) {
+			tmp[i] = tab[mid];
+			if(mid < right - 1) {
+				mid++;
+			}
+			else {
+				end_mid = true;
+			}
+		}
+		else if(end_left) {
+			tmp[i] = tab[mid];
+			if(mid < right - 1) {
+				mid++;
+			}
+			else {
+				end_mid = true;
+			}
+		}
+		else if(end_mid) {
+			tmp[i] = tab[left];
+			if(left < init_mid - 1) {
+				left++;
+			}
+			else {
+				end_left = true;
+			}
+		}
+	}
 }

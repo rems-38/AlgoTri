@@ -8,5 +8,4 @@ fonctions.o: fonctions.c fonctions.h
 	gcc -c $<
 
 clean: 
-	rm -rf *.o 
-	rm -rf main
+	rm -rf *.o main
