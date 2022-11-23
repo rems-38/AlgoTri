@@ -9,18 +9,18 @@ void affiche(int *a, int n){
 	for (i = 0 ; i < n ; i++){
 		printf("%d ", a[i]);
 	}
-	printf("\n\n");
+	printf("\n");
 }
 
 int compare(int *a, int *b, int n){
 	int i;
 	for(i=0; i < n ; i++){
 		if (a[i] != b[i]){
-			printf("Comparison FAILED at index %d\n\n", i);
+			printf("Comparison FAILED at index %d\n", i);
 			return i;
 		}
 	}
-	printf("Comparison OK\n\n");
+	printf("Comparison OK\n");
 	return -1;	
 }
 
@@ -65,22 +65,30 @@ int tri_insertion(int *a, int n){
 }
 
 int tri_merge(int *a, int n) {
-	static int swap_number = 0;
+	int swap_number = 0;
 	int *tmp = malloc(n * sizeof(int));
 
+	merge_aux(a, tmp, 0, n, &swap_number);
 	
+	for(int i = 0; i < n; i++) {
+		a[i] = tmp[i];
+	}
+	free(tmp);
+
+	return swap_number;
 }
 
-void mergesort_aux(int *tab, int *tmp, int left, int right, int *cnt) {
-	if(n == 1) return a;
-	else if(n == 2) {
-		if(a[0] > a[1]) {
-			swap(&a[0], &a[1]);
-		}
-	}
+void merge_aux(int *tab, int *tmp, int left, int right, int *cnt) {
+	int delta = right - left;
+	int mid = ((right + left) / 2) + 1;
+	
+	if(delta <= 1) return;
 	else {
-		// return merge(tri_merge(), tmp, 0, (n/2)+1, n, &swap_number)
+		merge_aux(tab, tmp, left, mid - 1, cnt);
+		merge_aux(tab, tmp, mid, right, cnt);
+		merge(tab, tmp, left, mid, delta, cnt);
 	}
+	return;
 }
 
 

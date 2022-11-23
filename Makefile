@@ -1,11 +1,11 @@
 main:main.o fonctions.o 
-	gcc -o $@ $^
+	gcc -o $@ $^ -g
 
 main.o: main.c fonctions.h 
-	gcc -c $<
+	gcc -c $< -g
 
 fonctions.o: fonctions.c fonctions.h 
-	gcc -c $<
+	gcc -c $< -g
 
 clean: 
 	rm -rf *.o main
