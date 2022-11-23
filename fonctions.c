@@ -68,6 +68,10 @@ int tri_merge(int *a, int n) {
 	static int swap_number = 0;
 	int *tmp = malloc(n * sizeof(int));
 
+	
+}
+
+void mergesort_aux(int *tab, int *tmp, int left, int right, int *cnt) {
 	if(n == 1) return a;
 	else if(n == 2) {
 		if(a[0] > a[1]) {
@@ -75,10 +79,8 @@ int tri_merge(int *a, int n) {
 		}
 	}
 	else {
-		return merge(tri_merge(), tmp, 0, (n/2)+1, n, &swap_number)
+		// return merge(tri_merge(), tmp, 0, (n/2)+1, n, &swap_number)
 	}
-	
-	
 }
 
 
@@ -86,22 +88,24 @@ void merge (int *tab, int *tmp, int left, int mid, int right, int *cnt) {
 	int init_mid = mid;
 	bool end_left = false, end_mid = false;
 	for(int i = left; i < right; i++) {
-		if((tab[left] < tab[mid]) && !end_left) {
-			tmp[i] = tab[left];
-			if(left < init_mid - 1) {
-				left++;
+		if(!end_left && !end_mid) {
+			if(tab[left] < tab[mid]) {
+				tmp[i] = tab[left];
+				if(left < init_mid - 1) {
+					left++;
+				}
+				else {
+					end_left = true;
+				}
 			}
 			else {
-				end_left = true;
-			}
-		}
-		else if ((tab[left] > tab[mid]) && !end_mid) {
-			tmp[i] = tab[mid];
-			if(mid < right - 1) {
-				mid++;
-			}
-			else {
-				end_mid = true;
+				tmp[i] = tab[mid];
+				if(mid < right - 1) {
+					mid++;
+				}
+				else {
+					end_mid = true;
+				}
 			}
 		}
 		else if(end_left) {

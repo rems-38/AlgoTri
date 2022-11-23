@@ -10,7 +10,7 @@ int main(){
 	int tab3[] = {3,6,6,7,8,10,14,15,17,19,81,21,23,25,26,28,28,28,32,32,34,35,38,38,39,43,44,46,48,49,50,58,59,62,64,65,69,71,75,79,79,79,20,84,86,89,92,93,97,99};
 	
 	int tab4[] = {5, 1, 4, 2, 3};
-	int tab4_prime[] = {38, 27};
+	int tab4_prime[] = {3, 27, 38, 43, 9, 10, 82};
 	int tab4_sorted[] = {1, 2, 3, 4, 5};
 
 	// int n = sizeof(ref)/sizeof(int);
@@ -21,11 +21,11 @@ int main(){
 
 	// return 0;
 	int swap_number = 0;
-	int n = 2;
+	int n = 7;
 
 	int *tmp = malloc(sizeof(int) * n);
 	affiche(tab4_prime, n);
-	merge(tab4_prime, tmp, 0, 1, n, &swap_number);
+	merge(tab4_prime, tmp, 0, 4, n, &swap_number);
 	affiche(tmp, n);
 }
 
