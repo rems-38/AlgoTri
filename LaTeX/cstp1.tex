@@ -62,14 +62,12 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-
-\lstset{language=C,%
-    %basicstyle=\color{red},
+\lstdefinestyle{languageC}{
+    language=C,
     aboveskip=3mm,
     belowskip=3mm,
     basicstyle={\small\ttfamily},
     breaklines=true,%
-    morekeywords={matlab2tikz},
     keywordstyle=\color{blue},%
     morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
     identifierstyle=\color{black},%
@@ -79,8 +77,52 @@
     numbers=left,%
     numberstyle={\tiny \color{black}},% size of the numbers
     numbersep=14pt, % this defines how far the numbers are from the text
-    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
-    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasi
+    frame=single,
+    frameround={t}{t}{t}{t},
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\lstdefinestyle{pseudoCode}{
+    aboveskip=3mm,
+    belowskip=3mm,
+    basicstyle={\small\ttfamily},
+    breaklines=true,
+    morekeywords={input, output, pour, si, echanger, fin, alors, faire},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{red}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=14pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasi
+    frame=single,
+    frameround={t}{t}{t}{t},
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\lstdefinestyle{Makefile}{
+    aboveskip=3mm,
+    belowskip=3mm,
+    basicstyle={\small\ttfamily},
+    breaklines=true,
+    morekeywords={gcc, rm},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{red}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=14pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasi
+    frame=single,
+    frameround={t}{t}{t}{t},
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
 }
 
 % Default fixed font does not support bold face
@@ -99,25 +141,93 @@
 \section{Introduction}
 Dans ce TP, maintenant que nous avons pris en main les outils de bases, nous allons passer à l'étude d'un système un peu plus complexe, qui traduit un vrai problème. En effet, nous allons étudier le mouvement d'un pendule (sans frottements) avec deux approches différentes : nous utiliserons Simulink dans la première partie et uniquement Matlab dans la deuxième.
 
-\section{Préparation}
+\section{Préparation} 
 \subsection{Pseudo code du tri "Bubble sort"} 
 
-\begin{lstlisting}[language=C, caption=Pseudo code du tri "Bubble sort"]
-    input: int N, int D
-    output: int
-    begin
-      res $\gets$ 0
-      while N $\geq$ D 
-        N $\gets$ N - D
-        res $\gets$ res + 1      
-      end
-      return res
-    end     
+\begin{lstlisting}[style=pseudoCode, caption=Pseudo code du tri "Bubble sort" optimisé]
+input: int *tab, int n
+output: int nb_swaps
+nb_swaps = 0
+pour i = 0 a n-1 faire
+    bool swapped = false
+    pour j = 0 a n-i-1 faire
+        si tab[j] > tab[j+1] alors
+            echanger tab[j] et tab[j+1]
+            nb_swaps++
+            swapped = true
+        fin si
+    fin pour
+    si swapped == false alors
+        retourner nb_swaps
+    fin si
+fin pour
 \end{lstlisting} 
+
+\subsection{Makefile} 
+\begin{lstlisting}[style=Makefile, caption=Makefile du projet]
+main:main.o fonctions.o 
+	gcc -o $@ $^
+
+main.o: main.c fonctions.h 
+	gcc -c $<
+
+fonctions.o: fonctions.c fonctions.h 
+	gcc -c $<
+
+clean: 
+	rm -rf *.o 
+	rm -rf main
+\end{lstlisting} 
+
+\section{Tri bulle}
+\begin{enumerate}
+    \item Avec le makefile écrit précédemment, le programme se compile et s'exécute correctement. Le programme affiche bien le contenu du tableau \texttt{tab1}.
+    \item Implémentation de la fonction \texttt{swap} en C. On utilise une variable temporaire pour échanger les valeurs des deux variables.
+\end{enumerate}
+    \begin{lstlisting}[style=languageC, caption=Implémentation de la fonction swap]
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+    \end{lstlisting}
+\begin{enumerate}[resume]
+    \item Implémentation du tri bulle en C. On utilise la fonction \texttt{swap} pour échanger les valeurs des deux variables. On utilise une variable \texttt{swapped} pour savoir si un échange a eu lieu. Si aucun échange n'a eu lieu, on peut arrêter le tri.
+\end{enumerate}
+    \begin{lstlisting}[style=languageC, caption=Implémentation optimisée du tri bulle]
+int bubbleSort(int *tab, int n) {
+    int nb_swaps = 0;
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n-1; i++) {
+        trie = true;
+        for (j = 0; j < n-i-1; j++) {
+            if (tab[j] > tab[j+1]) {
+                swap(&tab[j], &tab[j+1]);
+                nb_swaps++;
+                trie = false;
+            }
+        }
+        if (trie) {
+            break;
+        }
+    }
+    return nb_swaps;
+}
+    \end{lstlisting}
+\begin{enumerate}[resume]
+    \item On vérifie que le tri fonctionne correctement à l'aide de la fonction \texttt{compare} qui compare élément par élément le tableau trié avec le tableau de référence. On affiche le nombre d'échanges effectués.
+    \item Résultats du tri bulle pour les tableaux donnés :
+    \begin{itemize}
+        \item \texttt{tab1} : Comparaison OK, 682 échanges
+        \item \texttt{tab2} : Comparaison OK, 1216 échanges
+        \item \texttt{tab3} : Comparaison OK, 63 échanges
+        \item \texttt{ref} : Comparaison OK, 0 échanges
+    \end{itemize}
+\end{enumerate}
 
 \newpage 
 \section{Conclusion}
 Lors de ce TP, nous avons pu simuler le comportement d'un circuit RC + R//C à l'aide de Matlab. Nous avons pu faire une analyse temporelle et fréquentielle du circuit. Nous avons pu observer que la tension $U_c$ est déphasée par rapport à la tension $U_s$.
 
 \end{document}
-,
