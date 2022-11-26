@@ -83,6 +83,27 @@
     xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
 }
 
+\lstdefinestyle{languageClarge}{
+    language=C,
+    aboveskip=3mm,
+    belowskip=3mm,
+    basicstyle={\small\ttfamily},
+    breaklines=true,%
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=14pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasi
+    frame=single,
+    frameround={t}{t}{t}{t},
+    xleftmargin=.07\textwidth, xrightmargin=.07\textwidth
+}
+
 \lstdefinestyle{pseudoCode}{
     aboveskip=3mm,
     belowskip=3mm,
@@ -166,17 +187,17 @@ fin pour
 \subsection{Makefile} 
 \begin{lstlisting}[style=Makefile, caption=Makefile du projet]
 main:main.o fonctions.o 
-	gcc -o $@ $^
+    gcc -o $@ $^
 
 main.o: main.c fonctions.h 
-	gcc -c $<
+    gcc -c $<
 
 fonctions.o: fonctions.c fonctions.h 
-	gcc -c $<
+    gcc -c $<
 
 clean: 
-	rm -rf *.o 
-	rm -rf main
+    rm -rf *.o 
+    rm -rf main
 \end{lstlisting} 
 
 \section{Tri bulle}
@@ -224,9 +245,111 @@ int bubbleSort(int *tab, int n) {
         \item \texttt{tab3} : Comparaison OK, 63 échanges
         \item \texttt{ref} : Comparaison OK, 0 échanges
     \end{itemize}
+    \item Dans le pire des cas (tableau trié dans l'ordre décroissant) pour chaque élément du tableau, il y a $n-1$ comparaison. Donc le nombre d'opérations est de $n(n-1)$. Dans le meilleur des cas (tableau trié dans l'ordre croissant), il n'y a pas de comparaison. Donc le nombre d'opérations est de $n$. En résumé :
+    \begin{itemize}
+        \item Pire des cas : $O(n^2)$ 
+        \item Moyenne : $O(n^2)$
+        \item Meilleur des cas : $O(n)$
+    \end{itemize}
+    \item Complexité spatiale : tableau d'entiers de taille $n$, 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(n)$.
 \end{enumerate}
 
 \newpage 
+\section{Tri par insertion}
+\begin{enumerate}
+    \item Implémentation du tri par insertion en C. On utilise une variable \texttt{nb\_swaps} pour compter le nombre d'échanges effectués.
+\end{enumerate}
+\begin{lstlisting}[style=languageC, caption=Implémentation du tri par insertion]
+int tri_insertion(int *a, int n){
+    int swap_number = 0;
+    int i, j;
+    for (i = 1 ; i < n ; i++){
+        for (j = i ; j > 0 ; j--){
+            if (a[j] < a[j-1]){
+                swap(&a[j], &a[j-1]);
+                swap_number++;
+            }
+        }
+    }
+    return swap_number;
+}
+\end{lstlisting}
+\begin{enumerate}[resume]
+    \item Résultats du tri insertion pour les tableaux donnés :
+    \begin{itemize}
+        \item \texttt{tab1} : Comparaison OK, 682 échanges
+        \item \texttt{tab2} : Comparaison OK, 1216 échanges
+        \item \texttt{tab3} : Comparaison OK, 63 échanges
+        \item \texttt{ref} : Comparaison OK, 0 échanges
+    \end{itemize}
+\end{enumerate}
+
+\begin{enumerate}[resume]
+    \item Dans le pire des cas (tableau trié dans l'ordre décroissant) l'algorithme effectue de l'ordre de $\dfrac{n^2}{2}$ opérations. Dans le meilleur des cas (tableau trié dans l'ordre croissant), il y a $n-1$ comparaisons. Donc le nombre d'opérations est de au plus $n$. \\
+    On remarque que la complexité de l'algorithme du tri par insertion est linéaire quand le tableau est presque trié. Il est même plus efficace que le tri fusion ou le tri rapide dans ce cas.
+    En résumé :
+    \begin{itemize}
+        \item Pire des cas : $O(n^2)$ 
+        \item Moyenne : $O(n^2)$
+        \item Meilleur des cas : $O(n)$
+    \end{itemize}
+    \item Complexité spatiale : tableau d'entiers de taille $n$, 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(n)$.
+\end{enumerate}
+
+\section{Tri fusion}
+\begin{enumerate}
+    \item Si on déclare le tableau \texttt{tmp} en écrivant \texttt{int *tmp = tab;} on ne crée pas un nouveau tableau mais on crée un pointeur qui pointe vers le même tableau que \texttt{tab}. Si on modifie \texttt{tmp} on modifie aussi \texttt{tab}. Donc on ne peut pas utiliser \texttt{tmp} pour trier le tableau. \\
+    Si on déclare le tableau \texttt{tmp} en écrivant \texttt{int tmp[n];} on obtient une erreur de segmentation. En effet, la valeur de $n$ doit être connue à la compilation \\
+    \item Pour résoudre ce problème, on peut utiliser la fonction \texttt{malloc} qui permet de créer un nouveau tableau. On peut aussi utiliser la fonction \texttt{memcpy} qui permet de copier un tableau dans un autre. Si on déclare le tableau \texttt{tmp} en écrivant \texttt{int *tmp = malloc(n * sizeof(int));} on crée un nouveau tableau de taille $n$ et \texttt{tmp} pointera vers le premier élément de ce nouveau tableau. On peut donc utiliser \texttt{tmp} pour trier le tableau. 
+    \item Fonction \texttt{merge} qui fusionne deux tableaux triés en un seul tableau trié. On utilise une variable \texttt{nb\_swaps} pour compter le nombre d'échanges effectués.
+\end{enumerate}
+\begin{lstlisting}[style=languageClarge, caption=Implémentation de la fonction \texttt{merge}]
+void merge (int *tab, int *tmp, int left, int mid, int right, int *cnt) {
+    int init_mid = mid;
+    bool end_left = false, end_mid = false;
+    for(int i = left; i < right; i++) {
+        if(!end_left && !end_mid) {
+            if(tab[left] < tab[mid]) {
+                tmp[i] = tab[left];
+                if(left < init_mid - 1) {
+                    left++;
+                }
+                else {
+                    end_left = true;
+                }
+            }
+            else {
+                tmp[i] = tab[mid];
+                if(mid < right - 1) {
+                    mid++;
+                }
+                else {
+                    end_mid = true;
+                }
+            }
+        }
+        else if(end_left) {
+            tmp[i] = tab[mid];
+            if(mid < right - 1) {
+                mid++;
+            }
+            else {
+                end_mid = true;
+            }
+        }
+        else if(end_mid) {
+            tmp[i] = tab[left];
+            if(left < init_mid - 1) {
+                left++;
+            }
+            else {
+                end_left = true;
+            }
+        }
+    }
+}
+\end{lstlisting}
+
 \section{Conclusion}
 Lors de ce TP, nous avons pu simuler le comportement d'un circuit RC + R//C à l'aide de Matlab. Nous avons pu faire une analyse temporelle et fréquentielle du circuit. Nous avons pu observer que la tension $U_c$ est déphasée par rapport à la tension $U_s$.
 

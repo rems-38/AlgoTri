@@ -3,4 +3,6 @@
 \contentsline {subsection}{\numberline {2.1}Pseudo code du tri "Bubble sort"}{2}%
 \contentsline {subsection}{\numberline {2.2}Makefile}{2}%
 \contentsline {section}{\numberline {3}Tri bulle}{3}%
-\contentsline {section}{\numberline {4}Conclusion}{5}%
+\contentsline {section}{\numberline {4}Tri par insertion}{5}%
+\contentsline {section}{\numberline {5}Tri fusion}{5}%
+\contentsline {section}{\numberline {6}Conclusion}{7}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  26 NOV 2022 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  27 NOV 2022 00:55
 entering extended mode
 **c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
 (c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
@@ -859,26 +859,26 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \diagbox@outsepl=\dimen386
 \diagbox@outsepr=\dimen387
 )
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 129.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 150.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\t1txtt.fd"
 File: t1txtt.fd 2000/12/15 v3.1
 ) (cstp1.aux)
 \openout1 = `cstp1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
@@ -939,15 +939,15 @@ Dictionary: translator-basic-dictionary, Language: English
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 155.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 155.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 134.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 155.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-0.def"
@@ -991,26 +991,31 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {C:/Users/gener/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 169.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 190.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [2] ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [3] [4] [5] (cstp1.aux) ) 
+) [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+
+ []
+
+[5] [6] [7] (cstp1.aux) ) 
 Here is how much of TeX's memory you used:
- 40902 strings out of 481165
- 971303 string characters out of 2902091
- 1788758 words of memory out of 3000000
- 55910 multiletter control sequences out of 15000+200000
+ 40938 strings out of 481165
+ 971727 string characters out of 2902091
+ 1807176 words of memory out of 3000000
+ 55946 multiletter control sequences out of 15000+200000
  549430 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,97p,747b,1451s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on cstp1.pdf (5 pages, 102030 bytes).
+ 70i,7n,97p,747b,1818s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+Output written on cstp1.pdf (7 pages, 129599 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
