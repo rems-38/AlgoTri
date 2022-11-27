@@ -160,6 +160,8 @@ INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmis
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty
+INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
@@ -396,6 +398,9 @@ INPUT cstp1.toc
 INPUT cstp1.toc
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 OUTPUT cstp1.toc
+INPUT cstp1.lol
+INPUT cstp1.lol
+OUTPUT cstp1.lol
 OUTPUT cstp1.pdf
 INPUT C:\Users\gener\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm

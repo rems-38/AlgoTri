@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{tikz,tkz-tab}
 \usepackage{mathrsfs}
-\usepackage{listings}
+\usepackage{listings,chngcntr}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{multicol}
 \usepackage{float,graphicx}
@@ -153,10 +153,12 @@
 \renewcommand{\contentsname}{Table des matières}
 
 \begin{document}
-
+\counterwithin{lstlisting}{section}
 \maketitle
 
 \tableofcontents
+\lstlistoflistings
+
 \newpage
 
 \section{Introduction}

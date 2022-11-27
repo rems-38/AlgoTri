@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  27 NOV 2022 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  27 NOV 2022 14:16
 entering extended mode
 **c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
 (c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
@@ -371,7 +371,11 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+ ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.sty"
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -470,7 +474,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: pstricks 2020/06/11 v0.70 LaTeX wrapper for `PSTricks' (RN,HV)
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\pst-xkey.tex"
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
-) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pstricks\pstricks.tex" ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pstricks\pst-fp.tex" `pst-fp' v0.05, 2010/01/17 (hv)
+) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pstricks\pstricks.tex"
+("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pstricks\pst-fp.tex" `pst-fp' v0.05, 2010/01/17 (hv)
 \pstFP@xs=\count311
 \pstFP@xia=\count312
 \pstFP@xib=\count313
@@ -956,6 +961,10 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 \tf@toc=\write6
 \openout6 = `cstp1.toc'.
 
+ (cstp1.lol)
+\tf@lol=\write7
+\openout7 = `cstp1.lol'.
+
  [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -991,7 +1000,7 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {C:/Users/gener/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 190.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 192.
  ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [2] ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
@@ -999,21 +1008,21 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 [5] [6] [7] (cstp1.aux) ) 
 Here is how much of TeX's memory you used:
- 40959 strings out of 481165
- 971976 string characters out of 2902091
- 1809177 words of memory out of 3000000
- 55967 multiletter control sequences out of 15000+200000
+ 40972 strings out of 481165
+ 972397 string characters out of 2902091
+ 1809273 words of memory out of 3000000
+ 55973 multiletter control sequences out of 15000+200000
  549430 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,7n,97p,788b,1818s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on cstp1.pdf (7 pages, 125928 bytes).
+Output written on cstp1.pdf (7 pages, 126669 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
