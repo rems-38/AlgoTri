@@ -251,10 +251,10 @@ int bubbleSort(int *tab, int n) {
         \item Moyenne : $O(n^2)$
         \item Meilleur des cas : $O(n)$
     \end{itemize}
-    \item Complexité spatiale : tableau d'entiers de taille $n$, 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(n)$.
+    On peut dire que l'algorithme est adaptatif car on interrompt le tri dès qu'il n'y a plus d'échanges. Il s'adapte bien au tableau d'entrée, cela permet d'éviter des comparaisons inutiles et donc d'améliorer les performances dans certains cas.
+    \item Complexité spatiale : 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(1)$, il ne nécessite pas de tableau temporaire. Il est stable car il ne modifie pas l'ordre des éléments égaux.
 \end{enumerate}
 
-\newpage 
 \section{Tri par insertion}
 \begin{enumerate}
     \item Implémentation du tri par insertion en C. On utilise une variable \texttt{nb\_swaps} pour compter le nombre d'échanges effectués.
@@ -282,9 +282,6 @@ int tri_insertion(int *a, int n){
         \item \texttt{tab3} : Comparaison OK, 63 échanges
         \item \texttt{ref} : Comparaison OK, 0 échanges
     \end{itemize}
-\end{enumerate}
-
-\begin{enumerate}[resume]
     \item Dans le pire des cas (tableau trié dans l'ordre décroissant) l'algorithme effectue de l'ordre de $\dfrac{n^2}{2}$ opérations. Dans le meilleur des cas (tableau trié dans l'ordre croissant), il y a $n-1$ comparaisons. Donc le nombre d'opérations est de au plus $n$. \\
     On remarque que la complexité de l'algorithme du tri par insertion est linéaire quand le tableau est presque trié. Il est même plus efficace que le tri fusion ou le tri rapide dans ce cas.
     En résumé :
@@ -293,7 +290,7 @@ int tri_insertion(int *a, int n){
         \item Moyenne : $O(n^2)$
         \item Meilleur des cas : $O(n)$
     \end{itemize}
-    \item Complexité spatiale : tableau d'entiers de taille $n$, 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(n)$.
+    \item Complexité spatiale : 2 variables temporaires, variable \texttt{nb\_swaps} et variables de boucle. Donc $O(1)$. L'algorithme ne nécessite pas de tableau temporaire. Il est stable car il ne modifie pas l'ordre des éléments égaux.
 \end{enumerate}
 
 \section{Tri fusion}
@@ -350,7 +347,53 @@ void merge (int *tab, int *tmp, int left, int mid, int right, int *cnt) {
 }
 \end{lstlisting}
 
+\begin{enumerate}[resume]
+    \item Fonction \texttt{tri\_merge} qui utilise lance le tri fusion avec \texttt{merge\_aux} pour trier le tableau. On utilise une variable \texttt{nb\_swaps} pour compter le nombre d'échanges effectués.
+\end{enumerate}
+
+\begin{lstlisting}[style=languageClarge, caption=Implémentation de la fonction \texttt{tri\_merge}]
+int tri_merge(int *a, int n) {
+    int swap_number = 0;
+    int *tmp = malloc(n * sizeof(int));
+
+    merge_aux(a, tmp, 0, n, &swap_number);
+    
+    for(int i = 0; i < n; i++) {
+        a[i] = tmp[i];
+    }
+    free(tmp);
+
+    return swap_number;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[style=languageClarge, caption=Implémentation de la fonction \texttt{merge\_aux}]
+void merge_aux(int *tab, int *tmp, int left, int right, int *cnt) {
+    int delta = right - left;
+    if(delta > 1) {
+        int mid = (left + right) / 2;
+        tri_fusion(tab, tmp, left, mid, cnt);
+        tri_fusion(tab, tmp, mid+1, right, cnt);
+        merge(tab, tmp, left, mid, right, cnt);
+    }
+}
+\end{lstlisting}
+
+\begin{enumerate}[resume]
+    \item Résultats du tri fusion pour les tableaux donnés :
+    \begin{itemize}
+        \item \texttt{tab1} : Comparaison OK, 682 échanges
+        \item \texttt{tab2} : Comparaison OK, 1216 échanges
+        \item \texttt{tab3} : Comparaison OK, 63 échanges
+        \item \texttt{ref} : Comparaison OK, 0 échanges
+    \end{itemize}
+    \item Complexité temporelle : $O(n\log(n))$
+    \item La complexité spatiale de cet algorithme est de $O(n)$. En effet, on utilise un tableau de taille $n$ pour stocker les valeurs triées. On utilise aussi une variable \texttt{nb\_swaps} et des variables de boucle. On remarque que la complexité spatiale est supérieure à celle de l'algorithme du tri par insertion (ou du tri bulle) qui est de $O(1)$. L'algorithme est stable car on ne modifie pas l'ordre des éléments qui sont égaux dans la fonction \texttt{merge}.
+\end{enumerate}
+
+
+
 \section{Conclusion}
-Lors de ce TP, nous avons pu simuler le comportement d'un circuit RC + R//C à l'aide de Matlab. Nous avons pu faire une analyse temporelle et fréquentielle du circuit. Nous avons pu observer que la tension $U_c$ est déphasée par rapport à la tension $U_s$.
+Lors de ce TP, nous avons pû découvrir trois algorithmes de tri différents. D'une part nous avons les algorithme du tri bulle et du tri par insertion, qui sont assez simples à comprendre mais pas très efficaces. D'autre part, nous avons pu voir que le tri fusion est plus efficace que les deux autres algorithmes car il a une complexité temporelle de $O(n\log(n))$ alors que les deux autres algorithmes ont une complexité temporelle de $O(n^2)$. Néanmoins, dans certains cas, le tri par insertion peut être plus efficace que le tri fusion (notamment pour des tableaux presques triés). Il faut donc choisir l'algorithme de tri en fonction du tableau à trier.
 
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1669506903 "c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex" "cstp1.pdf" "cstp1" 1669506906
+["pdflatex"] 1669549742 "c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex" "cstp1.pdf" "cstp1" 1669549746
   "C:/Users/gener/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1602421099 14064 0852390753e6793235719d9526257e77 ""
   "C:/Users/gener/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk" 1669489983 10392 436f784bb2b4605d67f31d1406a21f27 ""
   "C:/Users/gener/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm" 1603198049 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -38,7 +38,6 @@
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/txfonts/t1xtt.tfm" 977342760 1384 8943063000d26272532f74ca134dfecd ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247593067 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
-  "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247593066 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247593067 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247593066 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247593067 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -241,10 +240,10 @@
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/pst-xkey.sty" 1419270738 1740 5b153824355229520616b428e1fa7882 ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
   "C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xstring/xstring.sty" 1543858404 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex" 1669506902 13719 ca79b55b97b537e242decace6c1fe7fe ""
-  "cstp1.aux" 1669506906 1623 1965d13303574eb1a7f4181f2d3cb392 "pdflatex"
-  "cstp1.tex" 1669506902 13719 ca79b55b97b537e242decace6c1fe7fe ""
-  "cstp1.toc" 1669506906 488 1ef37d7341a8c9c57a29b62fc42a9519 "pdflatex"
+  "c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex" 1669549739 16450 86c3653c56d54fc6d17c228ecde77771 ""
+  "cstp1.aux" 1669549745 1921 f75aef2912987593c034e5de6f4121bb "pdflatex"
+  "cstp1.tex" 1669549739 16450 86c3653c56d54fc6d17c228ecde77771 ""
+  "cstp1.toc" 1669549745 488 92c6c59c8eef63ea8256c0155ff41f9e "pdflatex"
   (generated)
   "cstp1.pdf"
   "cstp1.toc"

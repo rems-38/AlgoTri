@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  27 NOV 2022 00:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2021.5.25)  27 NOV 2022 12:49
 entering extended mode
 **c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
 (c:/Users/gener/Documents/NextcloudSync/Ordinateurs/Esisar/2A/CS221/TP1/AlgoTri/LaTeX/cstp1.tex
@@ -999,23 +999,23 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) ("C:\Users\gener\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
 [5] [6] [7] (cstp1.aux) ) 
 Here is how much of TeX's memory you used:
- 40938 strings out of 481165
- 971727 string characters out of 2902091
- 1807176 words of memory out of 3000000
- 55946 multiletter control sequences out of 15000+200000
+ 40959 strings out of 481165
+ 971976 string characters out of 2902091
+ 1809177 words of memory out of 3000000
+ 55967 multiletter control sequences out of 15000+200000
  549430 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,97p,747b,1818s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on cstp1.pdf (7 pages, 129599 bytes).
+ 70i,7n,97p,788b,1818s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gener\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/gener/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+Output written on cstp1.pdf (7 pages, 125821 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
