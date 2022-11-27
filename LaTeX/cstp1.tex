@@ -160,7 +160,7 @@
 \newpage
 
 \section{Introduction}
-Dans ce TP, maintenant que nous avons pris en main les outils de bases, nous allons passer à l'étude d'un système un peu plus complexe, qui traduit un vrai problème. En effet, nous allons étudier le mouvement d'un pendule (sans frottements) avec deux approches différentes : nous utiliserons Simulink dans la première partie et uniquement Matlab dans la deuxième.
+Dans ce TP, nous allons nous intéresser aux algorithmes de tri suivnats : tri bulle, tri par insertion et tri fusion. Nous allons les implémenter en C et les comparer en terme de complexité. 
 
 \section{Préparation} 
 \subsection{Pseudo code du tri "Bubble sort"} 
@@ -380,14 +380,13 @@ void merge_aux(int *tab, int *tmp, int left, int right, int *cnt) {
 \end{lstlisting}
 
 \begin{enumerate}[resume]
-    \item Résultats du tri fusion pour les tableaux donnés :
+    \item Après avoir testé plusieurs méthodes pour la fonction \texttt{merge\_aux}, nous n'avons pas réussi à trier correctement le tableau. Nous allons quand même essayer de répondre aux questions suivantes à l'aide de nos recherches.
+    \item La complexité temporelle du tri fusion est $O(n\log(n))$ car on divise le tableau en deux à chaque étape. En résumé :
     \begin{itemize}
-        \item \texttt{tab1} : Comparaison OK, 682 échanges
-        \item \texttt{tab2} : Comparaison OK, 1216 échanges
-        \item \texttt{tab3} : Comparaison OK, 63 échanges
-        \item \texttt{ref} : Comparaison OK, 0 échanges
+        \item Pire des cas : $O(n\log(n))$ 
+        \item Moyenne : $O(n\log(n))$
+        \item Meilleur des cas : $O(n\log(n))$
     \end{itemize}
-    \item Complexité temporelle : $O(n\log(n))$
     \item La complexité spatiale de cet algorithme est de $O(n)$. En effet, on utilise un tableau de taille $n$ pour stocker les valeurs triées. On utilise aussi une variable \texttt{nb\_swaps} et des variables de boucle. On remarque que la complexité spatiale est supérieure à celle de l'algorithme du tri par insertion (ou du tri bulle) qui est de $O(1)$. L'algorithme est stable car on ne modifie pas l'ordre des éléments qui sont égaux dans la fonction \texttt{merge}.
 \end{enumerate}
 
